@@ -41,7 +41,7 @@ function Hero() {
       <p className="eyebrow"><span className="small-star">✳</span> MARKETING & MULTIMEDIA</p>
       <h1 id="hero-title">Ideas with purpose.<br/>Visuals with <em>feeling.</em></h1>
       <p className="hero-intro">Hi, I’m Hannah.<span className="wave" aria-hidden="true">✧</span></p>
-      <p className="hero-description">Video editing is my strongest creative skill. I bring stories to life through thoughtful pacing, visuals, and sound, with a background in marketing and multimedia design.</p>
+      <p className="hero-description">I bring stories to life through thoughtful pacing, visuals, and sound, with a background in marketing and multimedia design.</p>
       <div className="hero-actions"><a className="button button-dark" href="#work">Explore my work <ArrowDownIcon/></a><a className="text-link" href="#contact">Get in touch <ArrowUpRight size={18}/></a></div>
       <div className="hero-location"><span className="location-dot"/><span>BASED IN THE PHILIPPINES</span></div>
     </div>
@@ -83,7 +83,7 @@ function FeaturedWork({ onOpen }: { onOpen: (p: Project, trigger: HTMLElement) =
   const visible = featured.filter(p => filter === 'All' || p.category === filter);
   return <section className="work-section wrap section-space" id="work" aria-labelledby="work-heading">
     <div className="section-topline"><p className="eyebrow">01 / FEATURED WORK</p><span className="aside-label">A FEW THINGS I’VE PUT MY HEART INTO</span></div>
-    <div className="section-heading-row"><h2 id="work-heading">From an idea<br/>to <em>something real.</em></h2><p>A collection of moving stories,<br className="desktop-break"/> thoughtful visuals, and purposeful design.</p></div>
+    <div className="section-heading-row"><h2 id="work-heading">From an idea<br/>to <em>something real.</em></h2><p>Video editing is my strongest creative skill. Explore my video edits, graphics, and visual stories.</p></div>
     <Filters value={filter} setValue={setFilter}/>
     <p className="sr-only" aria-live="polite">{visible.length} featured projects shown.</p>
     <div className="projects-grid">{visible.map(project => <ProjectCard key={project.id} project={project} onOpen={onOpen}/>)}</div>

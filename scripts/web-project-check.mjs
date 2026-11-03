@@ -13,7 +13,8 @@ try{
  async function audit(name,target=page){const r=await new AxeBuilder({page:target}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();report.accessibility.push({name,violations:r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))});}
  await page.goto(base+'/',{waitUntil:'domcontentloaded'});
  await page.getByRole('heading',{name:'Ideas with purpose. Visuals with feeling.'}).waitFor();
- assert(await page.locator('.hero-description').innerText().then(t=>t.includes('Video editing is my strongest creative skill.')));
+ assert(await page.locator('.hero-description').innerText().then(t=>!t.includes('Video editing is my strongest creative skill.')));
+ assert(await page.locator('#work .section-heading-row>p').innerText().then(t=>t.includes('Video editing is my strongest creative skill.')));
  assert.equal(await page.getByRole('link',{name:'Featured work',exact:true}).count(),1);
  assert.equal(await page.getByText(/selected work/i).count(),0);
  assert.equal(await page.locator('.project-card').count(),9);
