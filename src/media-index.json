@@ -1,0 +1,118 @@
+{
+  "terratrax": {
+    "width": 1587,
+    "height": 2245,
+    "sourceFile": "SCHOOL PROJECTS\\POSTER_TERRATRAX.png"
+  },
+  "terratrax-banner": {
+    "width": 2304,
+    "height": 5760,
+    "sourceFile": "SCHOOL PROJECTS\\TERRATRAX_TARP.png"
+  },
+  "himala": {
+    "width": 1728,
+    "height": 2304,
+    "sourceFile": "SCHOOL PROJECTS\\Gabion.png"
+  },
+  "hey-babe": {
+    "width": 1728,
+    "height": 2304,
+    "sourceFile": "SCHOOL PROJECTS\\Gabion (1).png"
+  },
+  "mothers-day": {
+    "width": 1414,
+    "height": 2000,
+    "sourceFile": "FREELANCE WORKS\\march 31.png"
+  },
+  "alba-crossbody": {
+    "width": 1080,
+    "height": 1080,
+    "sourceFile": "FREELANCE WORKS\\static.png"
+  },
+  "leather-comparison": {
+    "width": 1080,
+    "height": 1080,
+    "sourceFile": "FREELANCE WORKS\\static (1).png"
+  },
+  "sunglasses-case": {
+    "width": 1080,
+    "height": 1440,
+    "sourceFile": "FREELANCE WORKS\\Variation B - 3_4.png"
+  },
+  "birth-chart-a": {
+    "width": 1080,
+    "height": 1080,
+    "sourceFile": "FREELANCE WORKS\\Birth Chart\\Varation A - 1_1.png"
+  },
+  "birth-chart-b": {
+    "width": 1080,
+    "height": 1080,
+    "sourceFile": "FREELANCE WORKS\\Birth Chart\\Varation B - 1_1.png"
+  },
+  "birth-chart-c": {
+    "width": 1080,
+    "height": 1080,
+    "sourceFile": "FREELANCE WORKS\\Birth Chart\\Varation C - 1_1.png"
+  },
+  "birth-chart-d": {
+    "width": 1080,
+    "height": 1080,
+    "sourceFile": "FREELANCE WORKS\\Birth Chart\\Varation D - 1_1.png"
+  },
+  "hannah": {
+    "width": 4032,
+    "height": 3024,
+    "sourceFile": "codex-clipboard-e3b44e10-c163-405a-8e20-0379d79d611c.png"
+  },
+  "pricing-strategy": {
+    "duration": 101.28,
+    "width": 1080,
+    "height": 1920,
+    "sourceFile": "SCHOOL PROJECTS/Gabion_Hannah_PricingStrategyVideo.MOV"
+  },
+  "ethics": {
+    "duration": 60.04,
+    "width": 1920,
+    "height": 1080,
+    "sourceFile": "SCHOOL PROJECTS/GABION_ETHICS_FINALS.mp4"
+  },
+  "documentary": {
+    "duration": 486.48,
+    "width": 1920,
+    "height": 1080,
+    "sourceFile": "SCHOOL PROJECTS/Gabion_Hannah Michelle_DM32_MidtermDocu.mp4"
+  },
+  "freelance-01": {
+    "duration": 10.75,
+    "width": 1080,
+    "height": 1920,
+    "sourceFile": "FREELANCE WORKS/freelance work.mp4"
+  },
+  "freelance-02": {
+    "duration": 75.37,
+    "width": 1080,
+    "height": 1920,
+    "sourceFile": "FREELANCE WORKS/freelance work 2.mp4"
+  },
+  "antiklo": {
+    "duration": 136.5,
+    "width": 1080,
+    "height": 1350,
+    "sourceFile": "FREELANCE WORKS/Antiklo Flexi Light - Batch 30 - VSL Style - Lights to get rid of H1.mp4"
+  },
+  "understanding-ourselves": {
+    "width": 480,
+    "height": 360,
+    "sourceFile": "website/public/media/understanding-ourselves-youtube.jpg"
+  },
+  "lara-navigation": {
+    "width": 480,
+    "height": 360,
+    "sourceFile": "website/public/media/lara-navigation-youtube.jpg"
+  },
+  "oblicon": {
+    "width": 480,
+    "height": 360,
+    "sourceFile": "website/public/media/oblicon-youtube.jpg"
+  }
+}

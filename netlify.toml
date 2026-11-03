@@ -1,0 +1,21 @@
+[build]
+  command = "pnpm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+[[headers]]
+  for = "/media/video/*/*.m3u8"
+  [headers.values]
+    Content-Type = "application/vnd.apple.mpegurl"
+
+[[headers]]
+  for = "/media/video/*/*.ts"
+  [headers.values]
+    Content-Type = "video/mp2t"
+
+[[headers]]
+  for = "/captions/*.vtt"
+  [headers.values]
+    Content-Type = "text/vtt; charset=utf-8"
