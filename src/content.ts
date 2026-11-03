@@ -16,6 +16,34 @@ export type Project = {
   youtubeId?: string;
   duration?: string;
 };
+export type WebProject = {
+  id: string;
+  title: string;
+  platform: string;
+  description: string;
+  role: string;
+  href: string;
+  preview: string;
+  previewAlt: string;
+  relatedVideoId?: string;
+};
+export const webProjects: WebProject[] = [
+  {
+    id: 'lara-website', title: 'LARA', platform: 'HOSTINGER · ECOMMERCE',
+    description: 'An ecommerce website created with my team using Hostinger, bringing a clothing brand and its collection online.',
+    role: 'Created with my team using Hostinger', href: 'https://lara.ecommerceproj.online/',
+    preview: siteUrl('/media/lara-website.webp'), previewAlt: 'Screenshot of the LARA ecommerce website', relatedVideoId: 'lara-navigation',
+  },
+  {
+    id: 'bini-website', title: 'BINI', platform: 'HTML & CSS',
+    description: 'A website I built with HTML and CSS, with a home page and individual profiles for all eight BINI members.',
+    role: 'HTML & CSS development by me', href: siteUrl('/projects/bini/index.html'),
+    preview: siteUrl('/media/bini-website.webp'), previewAlt: 'Screenshot of my BINI HTML and CSS website',
+  },
+];
+export function editingCreditFor(project: Project) {
+  return project.category === 'Video' ? 'Video editing by me' : 'Graphic design & editing by me';
+}
 export const identity = {
   name: 'Hannah Michelle E. Gabion',
   email: 'gabion.hannahmichelle@gmail.com',

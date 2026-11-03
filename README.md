@@ -14,13 +14,21 @@ All 18 original works are represented once, alongside six YouTube
 videos: 9 featured projects and 15 additional projects. The family bonding video
 is excluded at the user’s request.
 
+A separate Web Projects section presents the team-created LARA Hostinger store
+and Hannah’s BINI HTML/CSS website. BINI is hosted at `/projects/bini/index.html`
+with repaired navigation, local images, and direct access without credentials.
+Its original layout and palette are retained. Photo sources are recorded in
+`public/projects/bini/image-sources.json` and credited on the project pages.
+The supplied ZIP is read without modification by `scripts/prepare-bini.py`.
+Video and graphic cards and viewers display Hannah’s editing/design credits.
+
 ## Preview and edit
 
 Requires Node.js 22.12+ and pnpm. Use `pnpm install`, then `pnpm dev`.
 For a production preview, run `pnpm build` and `pnpm preview`.
 Use an HTTP server; opening `index.html` with `file://` cannot load the app or HLS.
 
-Edit `src/content.ts` to update the biography, contacts, project titles, categories,
+Edit `src/content.ts` to update the biography, contacts, media and web projects, categories,
 descriptions, featured selection, social links, and tool list. Styling lives in
 `src/styles.css`. `src/media-index.json` records dimensions, durations, and the
 original file mapped to each project.
@@ -97,6 +105,7 @@ packages live in `.tools/` and are never included in the public build.
   Brand marks identify the software Hannah uses; no affiliation is implied.
 - DM Sans and Cormorant Garamond: Google Fonts, SIL Open Font License;
   self-hosted to avoid a visitor dependency on Google's font service.
+- BINI project photos: ABS-CBN’s current BINI page, https://www.abs-cbn.com/bini.
 - Interface icons: Lucide (ISC license).
 
 The Himala and Hey Babe! pieces are identified as school poster studies. Film
