@@ -29,7 +29,7 @@ try{
  report.checks.push('Category filters, artwork viewer, Escape, and focus restoration');
  await page.getByRole('button',{name:'Film & video',exact:true}).click();
  assert.equal(await page.locator('.project-card').count(),4);
- for(const title of ['Save Me a Drink','The barbershop edit','Bite the Beach']){
+ for(const title of ['Save Me a Drink','Barbershop Ad','Bite the Beach']){
   await page.getByRole('button',{name:new RegExp(title)}).click();
   await page.locator('.youtube-load').click();
   const frame=page.locator('iframe');await frame.waitFor();
