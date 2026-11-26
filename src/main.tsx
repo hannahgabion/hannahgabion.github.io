@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { ArrowUpRight, ArrowRight, ArrowLeft, Play, Plus, X, Menu, Download, FolderOpen, Film, Image as ImageIcon, Mail, Phone, MapPin, Sparkles, ChevronDown, Volume2 } from 'lucide-react';
-import { projects, webProjects, identity, tools, media, durationFor, editingCreditFor, type Project, type Category, type Collection } from './content';
+import { ArrowUpRight, ArrowRight, ArrowLeft, Play, Plus, X, Menu, Download, FolderOpen, Film, Image as ImageIcon, Mail, Phone, MapPin, Sparkles, ChevronDown, Volume2, Award } from 'lucide-react';
+import { projects, webProjects, certifications, identity, tools, media, durationFor, editingCreditFor, type Project, type Category, type Collection } from './content';
 import './styles.css';
 import { siteUrl } from './paths';
 
@@ -114,19 +114,31 @@ function Experience() {
       <div className="experience-item"><span className="experience-year">2026 — PRESENT</span><h3>Freelance Video Editor</h3><p>Editing short-form video advertisements and content for freelance clients.</p></div>
       <div className="experience-item"><span className="experience-year">2020 — 2022</span><h3>Livestreaming & Technical Support</h3><p>SRAP Social Communications Ministry</p></div>
       <div className="experience-item award-item"><span className="experience-year">SELECTED RECOGNITION</span><h3>Stories worth celebrating.</h3><ul><li><span>2026</span><div>PelikulAds — Best Cinematography<small>1st Runner-Up · FEU Diliman Junior Marketing Association</small></div></li><li><span>2025</span><div>Best in Formal Advertisement<small>3rd Business Innovation Week · FEU Diliman</small></div></li><li><span>2024</span><div>Top Performing Student<small>Academic Year 2023–2024 · FEU Diliman</small></div></li></ul></div>
-      <div className="certifications"><span className="experience-year">A FEW MORE TOOLS IN MY KIT</span><p>Certified Digital Marketing Professional <span>·</span> IT Specialist — HTML & CSS <span>·</span> Customer Service Foundations</p></div>
     </div></div></section>;
 }
 
+function Certifications() {
+  return <section className="certifications-section" id="certifications" aria-labelledby="certifications-heading"><div className="wrap">
+    <div className="section-topline"><p className="eyebrow">05 / CERTIFICATIONS</p><Flourish className="tiny-flourish"/></div>
+    <div className="section-heading-row"><h2 id="certifications-heading">Always curious.<br/><em>Always learning.</em></h2><p>Building my foundation in digital marketing, web design, and customer service.</p></div>
+    <div className="certification-grid">{certifications.map(certification => <article className="certification-card" key={certification.id}>
+      <div className="certification-icon" aria-hidden="true"><Award size={26}/></div>
+      <h3>{certification.title}</h3><p className="certification-issuer">{certification.issuer}</p>
+      <p className="certification-date">Issued <time dateTime={certification.issued}>{new Intl.DateTimeFormat('en-US', {month:'long',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(`${certification.issued}T00:00:00Z`))}</time></p>
+      <a className="text-link" href={certification.href} target="_blank" rel="noopener noreferrer">{certification.linkLabel}<ArrowUpRight size={17}/><span className="sr-only"> — {certification.title}, opens in a new tab</span></a>
+    </article>)}</div>
+  </div></section>;
+}
+
 function Toolkit() {
-  return <section className="toolkit-section" aria-labelledby="toolkit-heading"><div className="wrap"><div className="toolkit-header"><div><p className="eyebrow">05 / MY CREATIVE TOOLKIT</p><h2 id="toolkit-heading">Good ideas. <em>Favourite tools.</em></h2></div><p>The apps behind the edits,<br/>the layouts, and the little details.</p></div><div className="toolkit-grid">{tools.map(tool => <div className="tool-card" key={tool.logo}><img src={siteUrl(`/logos/${tool.logo}.svg`)} alt="" width="48" height="48" loading="lazy"/><h3>{tool.name}</h3><p>{tool.detail}</p></div>)}</div></div></section>;
+  return <section className="toolkit-section" aria-labelledby="toolkit-heading"><div className="wrap"><div className="toolkit-header"><div><p className="eyebrow">06 / MY CREATIVE TOOLKIT</p><h2 id="toolkit-heading">Good ideas. <em>Favourite tools.</em></h2></div><p>The apps behind the edits,<br/>the layouts, and the little details.</p></div><div className="toolkit-grid">{tools.map(tool => <div className="tool-card" key={tool.logo}><img src={siteUrl(`/logos/${tool.logo}.svg`)} alt="" width="48" height="48" loading="lazy"/><h3>{tool.name}</h3><p>{tool.detail}</p></div>)}</div></div></section>;
 }
 
 function Contact() {
   const [copied, setCopied] = useState(false);
   const [copyFailed, setCopyFailed] = useState(false);
   async function copyEmail() { try { await navigator.clipboard.writeText(identity.email); setCopied(true); setCopyFailed(false); window.setTimeout(() => setCopied(false), 3500); } catch { setCopyFailed(true); } }
-  return <section className="contact-section wrap section-space" id="contact" aria-labelledby="contact-heading"><div className="contact-intro"><p className="eyebrow">06 / LET’S MAKE SOMETHING</p><h2 id="contact-heading">Have a story in mind?<br/>Let’s bring it <em>to life.</em></h2><p>I’d love to hear your ideas, talk about a project,<br className="desktop-break"/> or simply connect.</p></div><div className="contact-card"><Flourish className="contact-star"/><a className="contact-email" href={`mailto:${identity.email}`}><Mail size={20}/><span>{identity.email}</span><ArrowUpRight size={20}/></a><div className="contact-details"><a href={`tel:${identity.tel}`}><Phone size={17}/>{identity.phone}</a><span><MapPin size={17}/>{identity.location}</span></div><div className="contact-actions"><a className="button button-dark" href={`mailto:${identity.email}`}>Say hello <ArrowUpRight size={18}/></a><button className="copy-email" onClick={copyEmail}>{copied ? 'Email copied ✓' : 'Copy email address'}</button></div><p className="sr-only" role="status">{copied ? 'Email address copied to clipboard.' : copyFailed ? `Copy is unavailable. The email address is ${identity.email}.` : ''}</p></div></section>;
+  return <section className="contact-section wrap section-space" id="contact" aria-labelledby="contact-heading"><div className="contact-intro"><p className="eyebrow">07 / LET’S MAKE SOMETHING</p><h2 id="contact-heading">Have a story in mind?<br/>Let’s bring it <em>to life.</em></h2><p>I’d love to hear your ideas, talk about a project,<br className="desktop-break"/> or simply connect.</p></div><div className="contact-card"><Flourish className="contact-star"/><a className="contact-email" href={`mailto:${identity.email}`}><Mail size={20}/><span>{identity.email}</span><ArrowUpRight size={20}/></a><div className="contact-details"><a href={`tel:${identity.tel}`}><Phone size={17}/>{identity.phone}</a><span><MapPin size={17}/>{identity.location}</span></div><div className="contact-actions"><a className="button button-dark" href={`mailto:${identity.email}`}>Say hello <ArrowUpRight size={18}/></a><button className="copy-email" onClick={copyEmail}>{copied ? 'Email copied ✓' : 'Copy email address'}</button></div><p className="sr-only" role="status">{copied ? 'Email address copied to clipboard.' : copyFailed ? `Copy is unavailable. The email address is ${identity.email}.` : ''}</p></div></section>;
 }
 
 function Footer() {
@@ -218,7 +230,7 @@ function App() {
   }, []);
   const open = (project: Project, element: HTMLElement) => {trigger.current = element; setSelected(project); const url = new URL(location.href); url.searchParams.set('project', project.id); history.pushState({},'',url);};
   const close = () => {setSelected(null); const url = new URL(location.href); url.searchParams.delete('project'); history.replaceState({},'',url);};
-  return <><a className="skip-link" href="#main">Skip to content</a><Header/>{archivePage ? <Archive onOpen={open}/> : <main id="main" tabIndex={-1}><Hero/><PracticeStrip/><FeaturedWork onOpen={open}/><WebProjects onOpen={open}/><About/><Experience/><Toolkit/><Contact/></main>}<Footer/>{selected && <ProjectDialog key={selected.id} project={selected} trigger={trigger.current} onClose={close}/>}</>;
+  return <><a className="skip-link" href="#main">Skip to content</a><Header/>{archivePage ? <Archive onOpen={open}/> : <main id="main" tabIndex={-1}><Hero/><PracticeStrip/><FeaturedWork onOpen={open}/><WebProjects onOpen={open}/><About/><Experience/><Certifications/><Toolkit/><Contact/></main>}<Footer/>{selected && <ProjectDialog key={selected.id} project={selected} trigger={trigger.current} onClose={close}/>}</>;
 }
 
 createRoot(document.getElementById('root')!).render(<App/>);

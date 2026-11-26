@@ -58,6 +58,35 @@ export const identity = {
     { label: 'Briefcase', url: 'https://paraverse.feutech.edu.ph/briefcase/profile/270013202D' },
   ],
 };
+export type Certification = {
+  id: string;
+  title: string;
+  issuer: string;
+  issued: string;
+  href: string;
+  linkLabel: 'View credential' | 'View on Briefcase';
+};
+// Titles, issuers, dates and credential links from Hannah's public Briefcase.
+export const certifications: Certification[] = [
+  {
+    id: 'customer-service', title: 'Customer Service Foundations',
+    issuer: 'LinkedIn Learning', issued: '2026-07-23',
+    href: `${identity.socials.find(s => s.label === 'Briefcase')!.url}#certifications`,
+    linkLabel: 'View on Briefcase',
+  },
+  {
+    id: 'digital-marketing', title: 'Certified Digital Marketing Professional (CDMP)',
+    issuer: 'East West International Educational Specialists', issued: '2026-07-17',
+    href: 'https://www.credly.com/badges/f6764068-465f-4781-b02d-b97c98680bf4',
+    linkLabel: 'View credential',
+  },
+  {
+    id: 'html-css', title: 'IT Specialist — HTML and CSS',
+    issuer: 'Certiport', issued: '2024-12-03',
+    href: 'https://www.credly.com/badges/b78fb0a8-a73e-4265-81ec-404c697f3707/public_url',
+    linkLabel: 'View credential',
+  },
+];
 export const projects: Project[] = [
   { id:'save-me-a-drink',title:'Save Me a Drink',category:'Video',kind:'youtube',collection:'School Projects',label:'Film trailer',description:'A promotional trailer that brings a story into focus through pacing, visual transitions, and the rhythm of an edit.',alt:'Thumbnail for the Save Me a Drink film trailer',featured:true,youtubeId:'AKGZ4RsqTAw',duration:'2:02' },
   { id:'barbershop',title:'The barbershop edit',category:'Video',kind:'youtube',collection:'School Projects',label:'Advertisement',description:'A barbershop advertisement, bringing service, atmosphere, and brand personality together on screen.',alt:'Thumbnail for the barbershop advertisement',featured:true,youtubeId:'IxjIiXCaXZA',duration:'1:46' },

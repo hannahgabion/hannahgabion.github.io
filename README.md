@@ -22,6 +22,12 @@ Its original layout and palette are retained. Photo sources are recorded in
 The supplied ZIP is read without modification by `scripts/prepare-bini.py`.
 Video and graphic cards and viewers display Hannah’s editing/design credits.
 
+The Certifications section lists the three credentials from Hannah’s public
+Briefcase, with issuer names and issue dates. CDMP and HTML/CSS link to their
+public Credly records; Customer Service Foundations links to its Briefcase
+listing because that entry does not provide a separate credential URL.
+Update these entries in the typed `certifications` list in `src/content.ts`.
+
 ## Preview and edit
 
 Requires Node.js 22.12+ and pnpm. Use `pnpm install`, then `pnpm dev`.

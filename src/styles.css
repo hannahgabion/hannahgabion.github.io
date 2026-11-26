@@ -137,9 +137,16 @@ em{font-weight:400}
 .award-item li{display:flex;gap:20px;font-size:12px;line-height:1.5}
 .award-item li>span{font-size:10px;color:var(--muted);padding-top:2px}
 .award-item small{display:block;font-size:10px;color:var(--muted);margin-top:4px}
-.certifications{padding-top:24px}
-.certifications p{font-size:11px;color:var(--muted);line-height:1.8;margin:0}
-.certifications p>span{margin-inline:5px}
+.certifications-section{padding-block:80px;background:#f4c5d729;border-block:1px solid var(--line)}
+.certification-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.certification-card{display:flex;flex-direction:column;align-items:flex-start;padding:30px;background:#fffdf8;border:1px solid var(--line);border-radius:4px}
+.certification-icon{display:grid;place-items:center;width:50px;height:50px;color:#8b3157;background:#f4c5d766;border-radius:50%;margin-bottom:24px}
+.certification-card h3{font-size:19px;line-height:1.4;margin-bottom:13px}
+.certification-issuer{font-size:13px;color:var(--muted);margin-bottom:12px}
+.certification-date{font-size:12px;color:var(--muted);margin-top:auto;margin-bottom:20px;padding-top:10px}
+.certification-card .text-link{min-height:44px;font-size:12px}
+@media(max-width:850px){.certification-grid{grid-template-columns:1fr;gap:16px}.certification-card{padding:26px}.certification-card h3{font-size:20px}.certification-icon{margin-bottom:18px}}
+@media(max-width:650px){.certifications-section{padding-block:60px}}
 .toolkit-section{padding:64px 0 73px;background:var(--cream);border-block:1px solid #e7daca}
 .toolkit-header{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:36px}
 .toolkit-header .eyebrow{margin-bottom:16px}
